@@ -4,14 +4,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    background-color: aqua;
+}
+
 ul {
     list-style-type: none;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 
@@ -21,28 +25,47 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: #393f4d;
+    color: white;
+    padding: 16px;
+    /* margin: 16px; */
 }
 
 .sidebar {
     grid-column: 1/2;
     grid-row: 1/3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    background-color: #FF7755;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 64px;
 }
+
+.sidebar-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    margin-bottom: 64px ;
+}
+
 
 .main {
     grid-column: 2/3;
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 16px;
+    margin-top: 16px;
+    gap: 24px;
 }
 
 .header-top{
     display: grid;
     grid-template-columns: 2fr 1fr;
     /* align-self: center;  */
+    
 }
 
 .header-bottom {
@@ -54,7 +77,17 @@ ul {
     grid-column: 1/2;
     grid-row: 1/3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    background-color: #bccbde;
+    gap: 16px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card {
+    border: 3px solid blue
 }
 
 .announcements {
@@ -62,8 +95,8 @@ ul {
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
-  
+    grid-template-rows: 4fr;
+    gap: 8px;
 }
 
 .trending {
@@ -71,17 +104,26 @@ ul {
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
+    grid-template-rows: 4fr;
+    gap: 8px;
 }
 
-.header-nav{
+.header-nav ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    
+    
 }
 
-.user {
+.user ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 100px 1fr;
+    
+}
+
+.user ul li {
+    justify-self: left;
 }
 
 .user-button {
@@ -91,5 +133,59 @@ ul {
 .user-button ul{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
+
+form {
+    display: flex;
+    align-self: center;
+    
+    align-items: center;
+}
+
+input {
+    flex-grow: 1;
+    border: 2px solid rgb(198, 188, 188);
+    border-radius: 10px;
+    margin-left: 16px;
+    height: 32px;
+}
+
+label {
+    font-size: 18px;
+}
+
+.header-nav{
+    align-self: center;
+
+}
+
+.user-button{
+    align-self: center;
+}
+
+.user {
+    align-self: center;
+}
+
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.nav ul li {
+    flex-grow: 1;
+    font-size: 24px;
+}
+
+
+.card .title {
+    font-size: 24px;
 }
 
