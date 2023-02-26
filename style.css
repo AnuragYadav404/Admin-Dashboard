@@ -28,6 +28,7 @@ ul {
     grid-row: 1/3;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .main {
@@ -49,19 +50,28 @@ ul {
     grid-template-columns: 2fr 1fr;
 }
 
-.articles {
+.article {
     grid-column: 1/2;
     grid-row: 1/3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
 .announcements {
     grid-column: 2/3;
     grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+  
 }
 
 .trending {
     grid-column: 2/3;
     grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
 }
 
 .header-nav{
@@ -82,3 +92,4 @@ ul {
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+
